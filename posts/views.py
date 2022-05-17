@@ -7,19 +7,14 @@ posts = [
     {
         "id": 1,
         "title": "Why is it difficult to learn Programming?",
-        "content": "This is to give reasons why it is hard"
+        "content": "This is to give reasons why it is hard",
     },
-    {
-        "id": 2,
-        "title": "Learn JavaScript",
-        "content": "This is a course on JS"
-    },
-
+    {"id": 2, "title": "Learn JavaScript", "content": "This is a course on JS"},
     {
         "id": 3,
         "title": "Why is it difficult to learn Programming?",
-        "content": "This is to give reasons why it is hard"
-    }
+        "content": "This is to give reasons why it is hard",
+    },
 ]
 
 
