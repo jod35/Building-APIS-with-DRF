@@ -1,4 +1,3 @@
-from . import views
 from django.urls import path
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -6,6 +5,7 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 
+from . import views
 
 urlpatterns = [
     path("signup/", views.SignUpView.as_view(), name="signup"),

@@ -1,12 +1,13 @@
+from accounts.serializers import CurrentUserPostsSerializer
+from django.shortcuts import get_object_or_404
+from rest_framework import generics, mixins, status
+from rest_framework.decorators import APIView, api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.request import Request
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-from rest_framework import status, generics, mixins
-from rest_framework.decorators import api_view, APIView, permission_classes
+
 from .models import Post
 from .serializers import PostSerializer
-from django.shortcuts import get_object_or_404
-from accounts.serializers import CurrentUserPostsSerializer
 
 
 @api_view(http_method_names=["GET", "POST"])

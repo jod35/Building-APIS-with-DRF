@@ -1,10 +1,11 @@
-from django.shortcuts import render
 from django.contrib.auth import authenticate
-from .serializers import SignUpSerializer
+from django.shortcuts import render
 from rest_framework import generics, status
-from rest_framework.response import Response
 from rest_framework.request import Request
+from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from .serializers import SignUpSerializer
 from .tokens import create_jwt_pair_for_user
 
 # Create your views here.
