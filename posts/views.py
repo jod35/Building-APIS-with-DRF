@@ -13,6 +13,13 @@ from rest_framework.response import Response
 from .models import Post
 from .serializers import PostSerializer
 from .permissions import ReadOnly, AuthorOrReadOnly
+from rest_framework.pagination import PageNumberPagination
+
+
+class CustomPaginator(PageNumberPagination):
+    page_size = 3
+    page_query_param = "page"
+    page_size_query_param = "page_size"
 
 
 @api_view(http_method_names=["GET", "POST"])
@@ -40,6 +47,7 @@ class PostListCreateView(
 
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
+    pagination_class = CustomPaginator
     queryset = Post.objects.all()
 
     def perform_create(self, serializer):
